@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  </head>
+
+  <body>
+    <div class="header2">
+      <h1>My CV</h1>
+    </div>
+    <nav>
+      <div>
+        <div>
+          <ul class="nav-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="mycv.html">My CV</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="School-Work">
+   
+    </div>
+    <script>
+      fetch('cv.json')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data){
+          appendData(data);
+        })
+        .catch(function(e){
+          console.log ("errormessage " + e);
+        });
+        function appendData(data){
+          let cvTest = document.getElementById("School-Work");
+          for (let i = 0; i <data.length; i++){
+            let cvtest2 =document.createElement("div");
+            cvtest2.innerHTML ="\n" + 'Name: ' + data[i].name + "\n" + 'Time: ' + data[i].time + "\n" +  'Description: ' + data[i].description + "\n";
+            cvTest.appendChild(cvtest2);
+          }
+        }
+    </script>
+  </body>
+</html>
