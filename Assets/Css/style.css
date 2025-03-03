@@ -2,19 +2,29 @@
   font-family: "Trirong", serif;
 }
 
-
 body {
   background: black;
+  margin: 0;
+  padding: 0;
 }
-.header1 {
+
+.header1, .header2 {
   padding: 0.5rem;
   text-align: center;
   color: white;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("space.jpeg");
   background-size: cover;
 }
+
+.header1 {
+  background-image: url("../images/space.jpeg");
+}
+
+.header2 {
+  background-image: url("../images/background2.jpg");
+}
+
 .headshot {
   border-radius: 50%;
 }
@@ -26,12 +36,14 @@ body {
   overflow: hidden;
   background-color: #333;
 }
+
 li {
   float: left;
   color: white;
   padding: 0.5rem;
   list-style-type: none;
 }
+
 li a {
   display: block;
   color: white;
@@ -39,12 +51,15 @@ li a {
   padding: 0.5rem;
   text-decoration: none;
 }
+
 li a:hover {
   background-color: pink;
 }
+
 li a:hover:not(.active) {
   background-color: #111;
 }
+
 .active {
   background-color: green;
 }
@@ -54,21 +69,32 @@ main {
   background: black;
 }
 
-.col-1 {
+.col-1, .col-2 {
   background: black;
   color: white;
   border: solid black 5px;
   border-radius: 25px;
   width: 50%;
 }
+
 .col-2 {
-  background: black;
-  color: white;
-  border: solid black 5px;
-  border-radius: 25px;
-  width: 50%;
   height: 38rem;
   padding-left: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid div {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 @media (min-width: 667px) {
@@ -80,36 +106,16 @@ main {
   }
 }
 
-.header2 {
-  padding: 5rem;
-  text-align: center;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url("background2.jpg");
-  background-size: cover;
-}
 h2 {
   color: white;
 }
-.grid {
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr 0.5fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr;
-  grid-gap: 10px;
-  padding-top: 5px;
-}
 
-.grid div {
-  width: 100%;
-  height: relative;
-  padding-bottom: 100%;
-  background: white;
-  text-align: center;
-}
 #School-Work {
-color: white;
-background-color: #111;
-white-space:pre-line;
+  color: white;
+  background-color: #111;
+}
 
+#School-Work h2, #School-Work h4, #School-Work p {
+  margin: 0.5rem 0;
+  padding: 0;
 }
