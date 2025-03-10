@@ -1,0 +1,43 @@
+/* General styles for printing */
+body {
+  background: none;
+  color: black;
+  font-size: 12pt;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide elements that are not needed for print */
+nav, .header1, .header2, .nav-ul, .headshot {
+  display: none;
+}
+
+/* Ensure images are displayed properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust heading styles */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  page-break-after: avoid;
+}
+
+/* Page break rules */
+@page {
+  margin: 1cm;
+}
+
+@media print {
+  /* Ensure links are visible and useful in print */
+  a:link:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* Avoid breaking inside elements */
+  h1, h2, h3, h4, h5, h6, p {
+    page-break-inside: avoid;
+  }
+}
