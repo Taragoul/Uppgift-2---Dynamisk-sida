@@ -1,4 +1,5 @@
 .banner {
+    position: relative;
     background-image: url("../space.jpeg");
     background-size: cover;
     background-position: center;
@@ -10,4 +11,12 @@
     letter-spacing: 2px;
     width: 100%;
     height: 300px;
+}
+
+.profile-pic-overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }

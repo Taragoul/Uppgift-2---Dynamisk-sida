@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/ProfilePic.css";
+import "../assets/styles/ProfilePic.css";
+import zakImg from "../assets/zak.jpg";
 
 
 const ProfilePic = () => (
     <div className="profile-pic-container">
-        <img src="/zak.jpg" alt="ProfilePicture" className="profile-pic" />
+        <img src={zakImg} alt="ProfilePicture" className="profile-pic" />
     </div>
 );
-
 export default ProfilePic;
