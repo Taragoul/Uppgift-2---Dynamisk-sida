@@ -1,0 +1,20 @@
+* {
+  font-family: "Trirong", serif;
+}
+
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  background: black;
+}
+
+@media (min-width: 667px) {
+  html {
+    font-size: 20px;
+  }
+}
