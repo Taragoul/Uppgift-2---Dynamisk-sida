@@ -1,0 +1,22 @@
+.cv-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  color: #fff;
+}
+
+.cv-entry {
+  background: #222;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.cv-entry h3 {
+  margin: 0;
+}
+
+.cv-time {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
