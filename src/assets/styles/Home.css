@@ -1,0 +1,24 @@
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2rem 5vw;
+}
+
+.about-me, .contact-info {
+  flex: 1;
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  min-width: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.about-me {
+  margin-right: 1.5rem;
+}
+
+.contact-info {
+  margin-left: 1.5rem;
+}
